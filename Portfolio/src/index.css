@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-fraun: "Fraunces", serif;
+  --font-montAlt: "Montserrat Alternates", sans-serif;
+}
+
+
+@layer components{
+   .skill_style{
+    @apply
+    py-1
+    md:py-5
+    xl:py-5
+    rounded-xl
+    border-2
+    grid
+    grid-cols-1
+    justify-items-center
+    lg:flex
+    justify-center
+    bg-stone-100
+    drop-shadow-xl
+    dark:bg-slate-600 
+    dark:text-white
+    text-black
+    }
+}
+@layer components{
+    .experience{
+        @apply
+        self-center
+        w-full
+        pl-5
+        md:pl-12
+        xl:pl-12
+        list-disc
+        list-inside
+        xl:text-left
+        dark:bg-slate-600 
+        dark:text-white
+        text-black
+        }
+}
+@layer components{
+    .titles{
+        @apply
+        m-20
+        text-3xl
+        md:text-6xl
+        xl:text-6xl
+        text-center
+        text-orange-700
+        font-fraun
+    }
+}
+@layer components{
+    .skills_icons{
+        @apply
+        w-24
+        md:w-28
+        xl:w-28
+       
+    }
+}
+@layer components{
+    .mobile_menu{
+        @apply
+        px-6
+        py-1
+        items-center
+        font-semibold
+        hover:text-orange-700
+     transition
+         
+    }
+}
+@layer components{
+    .desktop_tablet_menu{
+        @apply
+        sm:p-1
+        md:p-3
+        xl:p-3
+        hover:bg-red-400
+        hover:text-white
+        rounded-xl
+        }
+}
+@layer components{
+    .front_end_zoom{
+        @apply
+        rounded-xl 
+        max-w-xs 
+        transition 
+        duration-300
+        hover:scale-110
+    }
+}
