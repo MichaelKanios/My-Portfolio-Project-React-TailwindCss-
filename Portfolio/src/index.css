@@ -4,8 +4,27 @@
   --font-fraun: "Fraunces", serif;
   --font-montAlt: "Montserrat Alternates", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 
+@layer components{
+
+    .all_button{
+        @apply
+        font-fraun
+        bg-red-400
+        rounded-lg
+        text-white
+        text-sm
+        p-3
+        self-center
+        text-center        
+        duration-300
+        hover:bg-stone-800
+        }
+}
 @layer components{
    .skill_style{
     @apply
