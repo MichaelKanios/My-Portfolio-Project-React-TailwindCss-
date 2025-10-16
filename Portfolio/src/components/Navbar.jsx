@@ -6,9 +6,10 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full top-0 left-0 shadow-sm z-50">
+    <header className="w-full top-0 left-0 shadow-sm z-50 glass">
       <div className="flex justify-between items-center px-4 sm:px-6 md:px-10 py-3">
         {/* Logo */}
+        
         <div>
           <img
             className="w-16 xl:w-24 rounded-full "

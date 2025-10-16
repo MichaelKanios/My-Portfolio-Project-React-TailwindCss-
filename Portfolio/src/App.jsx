@@ -1,4 +1,5 @@
 import Experience from "./components/Experience"
+import HardSKills from "./components/HardSkills"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 
@@ -12,6 +13,7 @@ function App() {
     <Navbar />
     <Hero/>    
     <Experience/>   
+    <HardSKills/>
     </body>
      
     </>

@@ -1,6 +1,28 @@
+import { useEffect } from "react";
+import { useMotionValue, useMotionTemplate, animate } from "framer-motion";
+import { motion } from "motion/react"
+const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+
 const Hero =()=>{
+    const color = useMotionValue(COLORS_TOP[0]);
+
+  // animation loop
+  useEffect(() => {
+    animate(color, COLORS_TOP, {
+      ease: "easeInOut",
+      duration: 10,
+      repeat: Infinity,
+      repeatType: "mirror",
+    });
+  }, []);
+  const backgroundImage = useMotionTemplate`
+  radial-gradient(125% 125% at 50% 50%, ${color}, transparent 70%)`
+  const border =useMotionTemplate `1px sokid ${color}`
+  const boxShadow = useMotionTemplate `0px 4px 24px ${color}`
+
     return(
-        <div  className="grid md:grid-cols-2 xl:grid-cols-2 text-center justify-items-center items-center mt-22">
+        
+        <motion.section  style={{ backgroundImage }} className="grid md:grid-cols-2 xl:grid-cols-2 text-center rounded-xl justify-items-center items-center mt-12 p-6">
         <div className="">
             <div className="">
                 <h1 className="text-5xl xl:text-6xl pb-2 font-fraun animate-fadeInSlideRightDown">Hi, I'm</h1>
@@ -12,15 +34,28 @@ const Hero =()=>{
             <div className="py-10  ">
                 <h2 className="pb-5 font-monts font-semibold">Download my curriculum vitae:</h2>
                 <div className="flex justify-between ">
-                    <a className="px-3 py-3 all_button" href="#">DOWNLOAD CV</a>
-                    <a className="px-6 py-3 all_button animate-fadeInSlideRightDown " href="#contact">CONTACT ME</a>
+                    <button       
+                    
+                    className="px-3 py-3 all_button" href="#">DOWNLOAD CV</button>
+                    <motion.button
+                        style={{
+        border,
+        boxShadow
+      }}
+      whileHover={{
+        scale:1.015
+      }}
+      whileTap={{
+        scale:0.958
+      }}
+                    className="px-6 py-3 all_button animate-fadeInSlideRightDown " href="#contact">CONTACT ME</motion.button>
                 </div>
             </div>
         </div>
         <div className="w-2/3 xl:w-3/4">
             <img className="drop-shadow-2xl rounded-xl animate-fadeInSlideRightDown" src="./images/Main.jpg" alt="Main"/>
         </div>
-    </div>
+    </motion.section>
     )
 }
 export default Hero
