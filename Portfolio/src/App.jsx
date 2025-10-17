@@ -1,7 +1,9 @@
+import Education from "./components/Education"
 import Experience from "./components/Experience"
 import HardSKills from "./components/HardSkills"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import { Projects } from "./components/Projects"
 
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
     <Hero/>    
     <Experience/>   
     <HardSKills/>
+    <Education />
+    <Projects/>
     </body>
      
     </>

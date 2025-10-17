@@ -53,7 +53,7 @@ const Hero =()=>{
             </div>
         </div>
         <div className="w-2/3 xl:w-3/4">
-            <img className="drop-shadow-2xl rounded-xl animate-fadeInSlideRightDown" src="./images/Main.jpg" alt="Main"/>
+            <img className="drop-shadow-2xl rounded-full animate-fadeInSlideRightDown" src="./images/Main.jpg" alt="Main"/>
         </div>
     </motion.section>
     )

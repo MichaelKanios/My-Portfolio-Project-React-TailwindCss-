@@ -17,9 +17,10 @@ const HardSKills =()=>{
 
     return (
         <div>
+          <p id="skills" className="titlesmini">My Stacks</p>
             <section className="py-16 glass"> 
       <div className="max-w-[1200px] mx-auto px-4 text-center">
-        <p id="skills" className="titlesmini">My Stacks</p>
+        
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
           {stackItems.map((item) => (
             <div
