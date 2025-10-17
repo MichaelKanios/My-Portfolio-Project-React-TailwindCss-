@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "title": "Fylo landing page",
+    "photo": "images/fylo.jpg",
+    "url": "https://michaelkanios.github.io/Fylo-Landing-Page-with-Tailwind/"
+  },
+  {
+    "id": 2,
+    "title": "Results summary",
+    "photo": "images/result.jpg",
+    "url": "https://michaelkanios.github.io/Result-summary-component/"
+  },
+  {
+    "id": 3,
+    "title": "Huddle landing page",
+    "photo": "images/huddle.jpg",
+    "url": "https://michaelkanios.github.io/Huddle-landing-page-with-curved-sections/"
+  },
+  {
+    "id": 4,
+    "title": "Clipboard landing page",
+    "photo": "images/clipboard.jpg",
+    "url": "https://michaelkanios.github.io/2nd_Edition_Clipboard-Landing-Page-Full-response-/"
+  },
+  {
+    "id": 5,
+    "title": "Social proof section",
+    "photo": "images/social.jpg",
+    "url": "https://michaelkanios.github.io/Social-proof-section-Flex-only-/"
+  },
+  {
+    "id": 6,
+    "title": "News homepage",
+    "photo": "images/news.jpg",
+    "url": "https://michaelkanios.github.io/News-Home-page-Grid-Flex-/"
+  },
+  {
+    "id": 7,
+    "title": "Testimonials grid section",
+    "photo": "images/testimonials.jpg",
+    "url": "https://michaelkanios.github.io/Testimonials-grid-section-Grid-Flex-/"
+  },
+  {
+    "id": 8,
+    "title": "Single price grid",
+    "photo": "images/single.jpg",
+    "url": "https://michaelkanios.github.io/Single-price-grid-component-Grid-/"
+  },
+  {
+    "id": 9,
+    "title": "NFT card",
+    "photo": "images/nft.jpg",
+    "url": "https://michaelkanios.github.io/NFT-preview-card-component-FLEX-/"
+  },
+  {
+    "id": 10,
+    "title": "Stats card",
+    "photo": "images/stats.jpg",
+    "url": "https://michaelkanios.github.io/Stats-Preview-Card-Flex-Grid-/"
+  },
+  {
+    "id": 11,
+    "title": "Order summary",
+    "photo": "images/order.jpg",
+    "url": "https://michaelkanios.github.io/Order-summary-component-Flex-/"
+  },
+  {
+    "id": 12,
+    "title": "Four card",
+    "photo": "images/four_card.jpg",
+    "url": "https://michaelkanios.github.io/Four-card-feature-section-Grid-/"
+  },
+  {
+    "id": 13,
+    "title": "3-column card",
+    "photo": "images/3_column.jpg",
+    "url": "https://michaelkanios.github.io/3-column-preview-card-component-FLEX/"
+  },
+  {
+    "id": 14,
+    "title": "QR code component",
+    "photo": "images/qr.jpg",
+    "url": "https://michaelkanios.github.io/QR-Code-componet--Frontend-Mentor-Challenge-FLEX/"
+  },
+  {
+    "id": 15,
+    "title": "Product preview card",
+    "photo": "images/product.jpg",
+    "url": "https://michaelkanios.github.io/Product-preview-card-component-FLEX/"
+  },
+  {
+    "id": 16,
+    "category": "CodeWell Page",
+    "title": "TailwindCSS Landing Page",
+    "photo": "images/Codewell_Project.jpg",
+    "url": "https://michaelkanios.github.io/Web-Developer-Portfolio-Tailwind-Codewell/"
+  }
+]
