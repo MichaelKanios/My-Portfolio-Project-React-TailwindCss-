@@ -1,4 +1,3 @@
-
 import React, {
   useEffect,
   useRef,
@@ -20,10 +19,7 @@ export const CarouselContext = createContext({
   currentIndex: 0,
 });
 
-export const Carousel = ({
-  items,
-  initialScroll = 0
-}) => {
+export const Carousel = ({ items, initialScroll = 0 }) => {
   const carouselRef = React.useRef(null);
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
@@ -60,7 +56,7 @@ export const Carousel = ({
     if (carouselRef.current) {
       const cardWidth = isMobile() ? 230 : 384; // (md:w-96)
       const gap = isMobile() ? 4 : 8;
-      const scrollPosition = (cardWidth + gap) * (index + 1 );
+      const scrollPosition = (cardWidth + gap) * (index + 1);
       carouselRef.current.scrollTo({
         left: scrollPosition,
         behavior: "smooth",
@@ -74,21 +70,28 @@ export const Carousel = ({
   };
 
   return (
-    <CarouselContext.Provider value={{ onCardClose: handleCardClose, currentIndex }}>
+    <CarouselContext.Provider
+      value={{ onCardClose: handleCardClose, currentIndex }}
+    >
       <div className="relative w-full">
         <div
           className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:py-20 card "
           ref={carouselRef}
-          onScroll={checkScrollability}>
+          onScroll={checkScrollability}
+        >
           <div
-            className={cn("absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l")}></div>
+            className={cn(
+              "absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l"
+            )}
+          ></div>
 
           <div
             className={cn(
               "flex flex-row justify-start gap-4 pl-4",
               // remove max-w-4xl if you want the carousel to span the full width of its container
               "mx-auto "
-            )}>
+            )}
+          >
             {items.map((item, index) => (
               <motion.div
                 initial={{
@@ -106,7 +109,8 @@ export const Carousel = ({
                   },
                 }}
                 key={"card" + index}
-                className="rounded-3xl last:pr-[5%] md:last:pr-[33%]">
+                className="rounded-3xl last:pr-[5%] md:last:pr-[33%]"
+              >
                 {item}
               </motion.div>
             ))}
@@ -116,14 +120,16 @@ export const Carousel = ({
           <button
             className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
             onClick={scrollLeft}
-            disabled={!canScrollLeft}>
-            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+            disabled={!canScrollLeft}
+          >
+            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500 cursor-pointer" />
           </button>
           <button
             className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 disabled:opacity-50"
             onClick={scrollRight}
-            disabled={!canScrollRight}>
-            <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+            disabled={!canScrollRight}
+          >
+            <IconArrowNarrowRight className="h-6 w-6 text-gray-500 cursor-pointer" />
           </button>
         </div>
       </div>
@@ -131,11 +137,7 @@ export const Carousel = ({
   );
 };
 
-export const Card = ({
-  card,
-  index,
-  layout = false
-}) => {
+export const Card = ({ card, index, layout = false }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
@@ -177,27 +179,32 @@ export const Card = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg" />
+              className="fixed inset-0 h-full w-full bg-black/80 backdrop-blur-lg"
+            />
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900">
+              className="relative z-[60] mx-auto my-10 h-fit max-w-5xl rounded-3xl bg-white p-4 font-sans md:p-10 dark:bg-neutral-900"
+            >
               <button
                 className="sticky top-4 right-0 ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-black dark:bg-white"
-                onClick={handleClose}>
+                onClick={handleClose}
+              >
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white">
+                className="text-base font-medium text-black dark:text-white"
+              >
                 {card.category}
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-4 text-2xl font-semibold text-neutral-700 md:text-5xl dark:text-white">
+                className="mt-4 text-2xl font-semibold text-neutral-700 md:text-5xl dark:text-white"
+              >
                 {card.title}
               </motion.p>
               <div className="py-10">{card.content}</div>
@@ -208,18 +215,20 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-[40rem] md:w-96 dark:bg-neutral-900">
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/50 via-transparent to-transparent" />
+        className="relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl bg-gray-100 md:h-[40rem] md:w-96 dark:bg-neutral-900"
+      >
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/50 via-transparent to-transparent" />
         <div className="relative z-40 p-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-left font-sans text-sm font-medium text-white md:text-base">
+            className="text-left font-sans text-sm font-medium text-white md:text-base"
+          >
             {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="mt-2 max-w-xs text-left font-sans text-xl font-semibold [text-wrap:balance] text-white md:text-3xl">
+            className="mt-2 max-w-xs text-left font-sans text-xl font-semibold [text-wrap:balance] text-white md:text-3xl"
+          >
             {card.title}
           </motion.p>
         </div>
@@ -227,25 +236,19 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           fill
-          className="absolute inset-0 z-10 object-cover" />
+          className="absolute inset-0 z-10 object-cover"
+        />
       </motion.button>
     </>
   );
 };
 
-export const BlurImage = ({
-  height,
-  width,
-  src,
-  className,
-  alt,
-  ...rest
-}) => {
+export const BlurImage = ({ height, width, src, className, alt, ...rest }) => {
   const [isLoading, setLoading] = useState(true);
   return (
     <img
       className={cn(
-        "h-full w-full transition duration-300",
+        "h-full w-full transition duration-300 cursor-pointer",
         isLoading ? "blur-sm" : "blur-0",
         className
       )}
@@ -257,6 +260,7 @@ export const BlurImage = ({
       decoding="async"
       blurDataURL={typeof src === "string" ? src : undefined}
       alt={alt ? alt : "Background of a beautiful view"}
-      {...rest} />
+      {...rest}
+    />
   );
 };
