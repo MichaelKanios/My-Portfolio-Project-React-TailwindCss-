@@ -1,12 +1,12 @@
 const Education = () => {
   return (
     <>
-      <h1 id="education" className="titles">
+      <h1 id="education" className="titlesmini">
         Education
       </h1>
       <div
         className="dark:bg-slate-600 dark:text-white grid grid-cols-1 
-xl:flex mx-4 bg-stone-100 drop-shadow-xl rounded-lg font-monts text-base justify-items-center p-4 mb-10 glass"
+xl:flex mx-4 bg-stone-100 drop-shadow-xl rounded-lg font-monts text-base justify-items-center p-4 glass"
       >
         <div className="md:w-3/4  xl:w-1/2">
           <img

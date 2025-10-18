@@ -11,7 +11,7 @@ export function Projects() {
   ));
 
   return (
-    <div className="w-full h-full py-20">
+    <div className="w-full h-full ">
       <h2 className="titlesmini">My Project's</h2>
       <Carousel items={cards} />
     </div>
@@ -82,5 +82,4 @@ const data = [
     src: "./images/frontendmentor.jpg",
     content: <Frontendmentor />,
   },
- 
 ];

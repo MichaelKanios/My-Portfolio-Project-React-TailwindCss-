@@ -8,12 +8,9 @@ html {
   scroll-behavior: smooth;
 }
 
-
-@layer components{
-
-    .all_button{
-        @apply
-        font-fraun
+@layer components {
+  .all_button {
+    @apply font-fraun
         bg-red-400
         rounded-lg
         text-white
@@ -22,13 +19,12 @@ html {
         self-center
         text-center        
         duration-300
-        hover:bg-stone-800
-        }
+        hover:bg-stone-800;
+  }
 }
-@layer components{
-   .skill_style{
-    @apply
-    py-1
+@layer components {
+  .skill_style {
+    @apply py-1
     md:py-5
     xl:py-5
     rounded-xl
@@ -42,13 +38,12 @@ html {
     drop-shadow-xl
    
     dark:text-white
-    text-black
-    }
+    text-black;
+  }
 }
-@layer components{
-    .experience{
-        @apply
-        self-center
+@layer components {
+  .experience {
+    @apply self-center
         w-full
         pl-5
         md:pl-12
@@ -58,87 +53,87 @@ html {
         xl:text-left
     
         dark:text-white
-        text-black
-        }
+        text-black;
+  }
 }
-@layer components{
-    .titles{
-        @apply
-        m-20
+@layer components {
+  .titles {
+    @apply m-20
         text-3xl
         md:text-6xl
         xl:text-6xl
         text-center
         text-orange-700
-        font-fraun
-    }
+        font-fraun;
+  }
 }
-@layer components{
-    .titlesmini{
-        @apply  
-        mb-6      
+@layer components {
+  .titlesmini {
+    @apply my-12  
+            
         text-3xl
         md:text-6xl
         xl:text-6xl
         text-center
         text-orange-700
-        font-fraun
-    }
+        font-fraun;
+  }
 }
-@layer components{
-    .skills_icons{
-        @apply
-        w-24
+@layer components {
+  .skills_icons {
+    @apply w-24
         md:w-28
-        xl:w-28
-       
-    }
+        xl:w-28;
+  }
 }
-@layer components{
-    .mobile_menu{
-        @apply
-        px-6
+@layer components {
+  .mobile_menu {
+    @apply px-6
         py-1
         items-center
         font-semibold
         hover:text-orange-700
-     transition
-         
-    }
+     transition;
+  }
 }
-@layer components{
-    .desktop_tablet_menu{
-        @apply
-        sm:p-1
+@layer components {
+  .desktop_tablet_menu {
+    @apply sm:p-1
         md:p-3
         xl:p-3
         hover:bg-red-400
         hover:text-white
-        rounded-xl
-        }
+        rounded-xl;
+  }
 }
-@layer components{
-    .front_end_zoom{
-        @apply
-        rounded-xl 
+@layer components {
+  .front_end_zoom {
+    @apply rounded-xl 
         max-w-xs 
         transition 
         duration-300
-        hover:scale-110
-    }
+        hover:scale-110;
+  }
 }
-.glass{
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
-  border:1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-
 }
-.card{
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    border-radius: 20px;
-  border:1px solid rgba(255, 255, 255, 0.18);
+.card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }

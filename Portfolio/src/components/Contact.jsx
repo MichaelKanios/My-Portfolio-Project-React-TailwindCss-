@@ -1,3 +1,5 @@
+import { CometCard } from "../components/ui/comet-card";
+
 const Contact = () => {
   return (
     <>
@@ -5,14 +7,38 @@ const Contact = () => {
         Contact
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-6 xl:grid-cols-6 md:m-20 xl:m-20 md:gap-10 xl:gap-10 font-monts">
+      <div className="grid grid-cols-1 md:grid-cols-6 mb-20 gap-10 font-monts m-2">
         {/* Left Column */}
         <div className="dark:bg-slate-600 dark:text-white bg-stone-100 drop-shadow-xl rounded-lg col-span-2 p-4 text-center">
-          <img
-            className="rounded-xl"
-            src="images/Let_s talk.jpg"
-            alt="Let's talk"
-          />
+          <CometCard>
+            <button
+              type="button"
+              className="my-6 flex w-full max-w-xs md:max-w-sm xl:max-w-md cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 md:p-4"
+              aria-label="View invite F7RA"
+              style={{
+                transformStyle: "preserve-3d",
+                transform: "none",
+                opacity: 1,
+              }}
+            >
+              <div className="mx-2 flex-1">
+                <div className="relative aspect-[3/4] w-full">
+                  <img
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full rounded-[16px] object-cover contrast-90"
+                    alt="Invite background"
+                    src="images/Let_s talk.jpg"
+                    style={{
+                      boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
+                      opacity: 1,
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="text-xs">...put your cursor here </div>
+            </button>
+          </CometCard>
+
           <h3 className="font-semibold text-base md:text-lg xl:text-lg my-3">
             Kanios Michael
           </h3>
@@ -22,7 +48,7 @@ const Contact = () => {
             or just by filling the form.
           </p>
 
-          <div className="flex my-4 justify-center md:justify-start xl:justify-start">
+          <div className="flex my-4 justify-center">
             <img
               className="w-8 md:w-10"
               src="images/receive-mail.png"
@@ -38,7 +64,7 @@ const Contact = () => {
             </a>
           </div>
 
-          <div className="flex justify-center md:justify-start xl:justify-start">
+          <div className="flex justify-center">
             <img
               className="w-8 md:w-10"
               src="images/linkedin.png"
@@ -56,7 +82,7 @@ const Contact = () => {
         </div>
 
         {/* Right Column */}
-        <div className="mt-10 md:mt-0 xl:mt-0 dark:bg-slate-400 dark:text-white drop-shadow-2xl col-span-4 bg-stone-100 rounded-lg">
+        <div className="mt-10 md:mt-0  dark:bg-slate-400 dark:text-white drop-shadow-2xl col-span-4 bg-stone-100 rounded-xl">
           <div className="text-center">
             <h2 className="font-semibold text-base md:text-xl xl:text-xl mt-8">
               Let's talk

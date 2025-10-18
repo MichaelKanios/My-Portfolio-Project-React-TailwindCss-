@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="dark:bg-slate-400 dark:text-white grid grid-cols-1 md:grid-cols-6 xl:grid-cols-6 md:m-20 xl:m-20 bg-stone-100 drop-shadow-xl rounded-lg py-5 font-monts">
+    <div className="dark:bg-slate-400 dark:text-white grid grid-cols-1 md:grid-cols-6 xl:grid-cols-6 m-2  bg-stone-100 drop-shadow-xl rounded-lg py-5 font-monts">
       {/* Social Icons */}
       <div className="col-span-2 flex justify-center items-center">
         <a
@@ -50,8 +50,8 @@ const Footer = () => {
       </div>
 
       {/* Navigation */}
-      <div className="md:col-start-3 md:col-end-7 xl:col-start-3 xl:col-end-7 text-center self-center font-fraun text-base md:text-xl xl:text-xl">
-        <nav className="space-x-4">
+      <div className="md:col-start-3 md:col-end-7 xl:col-start-3 xl:col-end-7 text-center self-center font-fraun text-base md:text-l xl:text-xl ">
+        <nav className="flex flex-wrap justify-center gap-4">
           <a className="desktop_tablet_menu" href="#mk">
             M.K
           </a>
