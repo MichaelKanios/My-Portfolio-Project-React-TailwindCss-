@@ -1,6 +1,5 @@
 import Contact from "./components/Contact";
 import Education from "./components/Education";
-import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import HardSKills from "./components/HardSkills";
 import Hero from "./components/Hero";

@@ -7,7 +7,7 @@ const Education = () => {
       </h1>
       <div className=" grid grid-cols-1 md:flex md:justify-around bg-stone-100 drop-shadow-xl rounded-lg font-monts text-base justify-items-center p-4 glass">
         <div className=" text-gray-100 py-16 px-6">
-          <h2 className="text-xl md:text-3xl font-bold text-center mb-10 text-orange-500 border-1 rounded-xl p-4 glass">
+          <h2 className="text-xl md:text-3xl font-bold text-center mb-4 md:mb-10 text-orange-500 border-1 rounded-xl p-4 glass">
             Public Vocational Training Institute
           </h2>
 
@@ -18,7 +18,7 @@ const Education = () => {
             className="max-w-2xl mx-auto bg-slate-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
           >
             <img
-              className="rounded-lg md:skew-4 xl:skew-4 hover:duration-500 hover:origin-bottom my-4"
+              className="rounded-lg  my-4"
               src="./images/education.jpg"
               alt="Education"
             />
@@ -58,7 +58,7 @@ const Education = () => {
             className="max-w-2xl mx-auto bg-slate-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300"
           >
             <img
-              className="rounded-lg md:skew-4 xl:skew-4 hover:duration-500 hover:origin-bottom my-4"
+              className="rounded-lg  my-4"
               src="./images/Udemy.jpg"
               alt="Udemy"
             />

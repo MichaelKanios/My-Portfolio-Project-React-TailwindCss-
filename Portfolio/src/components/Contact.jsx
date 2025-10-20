@@ -9,11 +9,11 @@ const Contact = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-6 mb-20 gap-10 font-monts m-2">
         {/* Left Column */}
-        <div className="dark:bg-slate-600 dark:text-white bg-stone-100 drop-shadow-xl rounded-lg col-span-2 p-4 text-center">
+        <div className="dark:bg-slate-600 dark:text-white bg-stone-100 drop-shadow-xl rounded-lg col-span-4 md:col-span-2 p-4 text-center">
           <CometCard>
             <button
               type="button"
-              className="my-6 flex w-full max-w-xs md:max-w-sm xl:max-w-md cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 md:p-4"
+              className="my-6 flex w-full max-w-md md:max-w-l xl:max-w-xl cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 md:p-"
               aria-label="View invite F7RA"
               style={{
                 transformStyle: "preserve-3d",
@@ -22,7 +22,7 @@ const Contact = () => {
               }}
             >
               <div className="mx-2 flex-1">
-                <div className="relative aspect-[3/4] w-full">
+                <div className="relative aspect-[3/4] w-full  ">
                   <img
                     loading="lazy"
                     className="absolute inset-0 h-full w-full rounded-[16px] object-cover contrast-90"
