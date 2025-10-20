@@ -32,8 +32,7 @@ html {
     grid
     grid-cols-1
     justify-items-center
-    lg:flex
-    justify-center
+    
     bg-stone-100
     drop-shadow-xl
    

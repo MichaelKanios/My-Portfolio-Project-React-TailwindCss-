@@ -98,31 +98,16 @@ const Contact = () => {
             action="https://formsubmit.co/kanios.michael@gmail.com"
             method="POST"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-5">
-              <div>
-                <label className="font-semibold" htmlFor="your-name">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  className="border-b-4 rounded-lg py-2 w-full"
-                />
-              </div>
-
-              <div>
-                <label className="font-semibold" htmlFor="phone-number">
-                  Phone Number
-                </label>
-                <input
-                  type="text"
-                  pattern="[0-9]{10}"
-                  placeholder="2101234567"
-                  name="phone"
-                  className="border-b-4 rounded-lg py-2 w-full"
-                />
-              </div>
+            <div>
+              <label className="font-semibold" htmlFor="your-name">
+                Your Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                required
+                className="border-b-4 rounded-lg py-2 w-full"
+              />
             </div>
 
             <div className="mt-4">

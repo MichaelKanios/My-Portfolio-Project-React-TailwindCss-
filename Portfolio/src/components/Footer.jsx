@@ -39,7 +39,7 @@ const Footer = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.facebook.com/share/1ERfMj2L4Z/?mibextid=wwXIfr"
+          href="https://www.facebook.com/profile.php?id=100037599635230"
         >
           <img
             className="w-10 ml-4 hover:scale-110 duration-200"
