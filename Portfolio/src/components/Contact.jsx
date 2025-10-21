@@ -1,6 +1,46 @@
 import { CometCard } from "../components/ui/comet-card";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react";
+
+const schema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Invalid email address"),
+  subject: z.string().optional(),
+  message: z
+    .string()
+    .min(10, "Message must be at least 10 characters")
+    .max(500, "Message cannot exceed 500 characters"),
+});
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: zodResolver(schema),
+  });
+
+  const [successMessage, setSuccessMessage] = useState("");
+
+  const onSubmit = (data) => {
+    console.log("Form data:", data);
+
+    // simulate sending form (e.g. API call)
+    setSuccessMessage("Message sent! ✅");
+
+    // clear form fields
+    reset();
+
+    // remove success message after 3 seconds
+    setTimeout(() => {
+      setSuccessMessage("");
+    }, 3000);
+  };
+
   return (
     <>
       <h1 id="contact" className="titlesmini">
@@ -13,16 +53,11 @@ const Contact = () => {
           <CometCard>
             <button
               type="button"
-              className="my-6 flex w-full max-w-md md:max-w-l xl:max-w-xl cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2 md:p-"
+              className="my-6 flex w-full max-w-md md:max-w-l xl:max-w-xl cursor-pointer flex-col items-stretch rounded-[16px] border-0 bg-[#1F2121] p-2"
               aria-label="View invite F7RA"
-              style={{
-                transformStyle: "preserve-3d",
-                transform: "none",
-                opacity: 1,
-              }}
             >
               <div className="mx-2 flex-1">
-                <div className="relative aspect-[3/4] w-full  ">
+                <div className="relative aspect-[3/4] w-full">
                   <img
                     loading="lazy"
                     className="absolute inset-0 h-full w-full rounded-[16px] object-cover contrast-90"
@@ -30,12 +65,11 @@ const Contact = () => {
                     src="images/Let_s talk.jpg"
                     style={{
                       boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
-                      opacity: 1,
                     }}
                   />
                 </div>
               </div>
-              <div className="text-xs">...put your cursor here </div>
+              <div className="text-xs">...put your cursor here</div>
             </button>
           </CometCard>
 
@@ -82,7 +116,7 @@ const Contact = () => {
         </div>
 
         {/* Right Column */}
-        <div className="mt-10 md:mt-0  dark:bg-slate-400 dark:text-white drop-shadow-2xl col-span-4 bg-stone-100 rounded-xl">
+        <div className="mt-10 md:mt-0 dark:bg-slate-400 dark:text-white drop-shadow-2xl col-span-4 bg-stone-100 rounded-xl">
           <div className="text-center">
             <h2 className="font-semibold text-base md:text-xl xl:text-xl mt-8">
               Let's talk
@@ -95,19 +129,19 @@ const Contact = () => {
           {/* Form */}
           <form
             className="dark:bg-slate-600 dark:text-white p-4"
-            action="https://formsubmit.co/kanios.michael@gmail.com"
-            method="POST"
+            onSubmit={handleSubmit(onSubmit)}
           >
             <div>
               <label className="font-semibold" htmlFor="your-name">
                 Your Name
               </label>
               <input
-                type="text"
-                name="name"
-                required
+                {...register("name")}
                 className="border-b-4 rounded-lg py-2 w-full"
               />
+              {errors.name && (
+                <p style={{ color: "red" }}>{errors.name.message}</p>
+              )}
             </div>
 
             <div className="mt-4">
@@ -115,20 +149,18 @@ const Contact = () => {
                 Your Email*
               </label>
               <input
-                type="email"
-                name="email"
-                id="email"
-                required
                 className="border-b-4 rounded-lg py-2 w-full"
+                {...register("email")}
               />
+              {errors.email && (
+                <p style={{ color: "red" }}>{errors.email.message}</p>
+              )}
 
               <label className="font-semibold mt-4 block" htmlFor="subject">
                 Subject
               </label>
               <input
-                type="text"
-                name="subject"
-                required
+                {...register("subject")}
                 className="border-b-4 rounded-lg py-2 w-full"
               />
 
@@ -136,13 +168,15 @@ const Contact = () => {
                 Message
               </label>
               <textarea
+                {...register("message")}
                 id="message"
-                name="message"
                 rows="8"
-                required
                 placeholder="Your message..."
                 className="border-b-4 rounded-lg w-full italic py-2"
-              ></textarea>
+              />
+              {errors.message && (
+                <p style={{ color: "red" }}>{errors.message.message}</p>
+              )}
 
               <button
                 type="submit"
@@ -150,6 +184,13 @@ const Contact = () => {
               >
                 Send Message
               </button>
+
+              {/* ✅ Success message */}
+              {successMessage && (
+                <p className="text-green-600 font-semibold mt-3 text-center">
+                  {successMessage}
+                </p>
+              )}
 
               <p className="italic text-sm pt-2">
                 *I will never send you spam emails
