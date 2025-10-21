@@ -1,3 +1,4 @@
+import BackToTop from "./components/BackToTop";
 import Contact from "./components/Contact";
 import ContactForm from "./components/ContactForm";
 import Education from "./components/Education";
@@ -19,6 +20,7 @@ function App() {
       <Education />
       <Contact />
       <Footer />
+      <BackToTop/>
     </>
   );
 }
