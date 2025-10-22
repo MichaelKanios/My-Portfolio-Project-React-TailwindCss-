@@ -5,7 +5,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 
-
 const schema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
@@ -29,11 +28,9 @@ const Contact = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-
   const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
 
   const onSubmit = async (data) => {
     setLoading(true);
@@ -58,7 +55,7 @@ const Contact = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-6 mb-20 gap-10 font-monts m-2">
         {/* Left Column */}
-        <div className="dark:bg-slate-600 dark:text-white bg-stone-100 drop-shadow-xl rounded-lg col-span-4 md:col-span-2 p-4 text-center">
+        <div className=" glass drop-shadow-xl rounded-lg col-span-4 md:col-span-2 p-4 text-center">
           <CometCard>
             <button
               type="button"
@@ -125,7 +122,7 @@ const Contact = () => {
         </div>
 
         {/* Right Column */}
-        <div className="mt-10 md:mt-0 dark:bg-slate-400 dark:text-white drop-shadow-2xl col-span-4 bg-stone-100 rounded-xl">
+        <div className="mt-10 md:mt-0 drop-shadow-2xl col-span-4  rounded-xl glass">
           <div className="text-center">
             <h2 className="font-semibold text-base md:text-xl xl:text-xl mt-8">
               Let's talk
@@ -198,7 +195,7 @@ const Contact = () => {
               >
                 Send Message
               </button>
-{successMessage && (
+              {successMessage && (
                 <p className="text-green-600 font-semibold mt-3 text-center">
                   {successMessage}
                 </p>

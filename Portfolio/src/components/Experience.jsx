@@ -6,7 +6,7 @@ const Experience = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-        <div className="skill_style  glass grid grid-cols-1 xl:grid-cols-2">
+        <div className="skill_style  glass grid grid-cols-1 xl:grid-cols-2 ">
           <div>
             <a
               target="_blank"

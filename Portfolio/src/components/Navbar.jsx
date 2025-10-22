@@ -2,14 +2,13 @@ import { useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 
 const Navbar = () => {
-    
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="w-full top-0 left-0 shadow-sm z-50 card">
       <div className="flex justify-between items-center px-4 sm:px-6 md:px-10 py-3">
         {/* Logo */}
-        
+
         <div>
           <img
             className="w-16 xl:w-24 rounded-full "
@@ -33,14 +32,26 @@ const Navbar = () => {
         </div>*/}
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex font-fraun text-lg dark:text-white space-x-6 ">
-          <a href="#mk" className="desktop_tablet_menu">M.K</a>
-          <a href="#experience" className="desktop_tablet_menu ">Experience</a>
-          <a href="#skills" className="desktop_tablet_menu ">Skills</a>
-          <a href="#education" className="desktop_tablet_menu ">Education</a>
-          <a href="#projects" className="desktop_tablet_menu ">Projects</a>
-          <a href="#contact" className="desktop_tablet_menu ">Contact</a>
-          </nav>
+        <nav className="hidden md:flex font-fraun text-lg  space-x-6 ">
+          <a href="#mk" className="desktop_tablet_menu">
+            M.K
+          </a>
+          <a href="#experience" className="desktop_tablet_menu ">
+            Experience
+          </a>
+          <a href="#skills" className="desktop_tablet_menu ">
+            Skills
+          </a>
+          <a href="#education" className="desktop_tablet_menu ">
+            Education
+          </a>
+          <a href="#projects" className="desktop_tablet_menu ">
+            Projects
+          </a>
+          <a href="#contact" className="desktop_tablet_menu ">
+            Contact
+          </a>
+        </nav>
         {/* Hamburger Button (Mobile) */}
         <div className="md:hidden flex items-center">
           <button
@@ -133,7 +144,7 @@ const Navbar = () => {
               />
             </a>
             <a
-              href="https://www.instagram.com/mkanios77/"
+              href="https://www.instagram.com/chronophos_mk"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -144,7 +155,7 @@ const Navbar = () => {
               />
             </a>
             <a
-              href="https://www.facebook.com/share/1ERfMj2L4Z/?mibextid=wwXIfr"
+              href="https://www.facebook.com/profile.php?id=100037599635230"
               target="_blank"
               rel="noopener noreferrer"
             >

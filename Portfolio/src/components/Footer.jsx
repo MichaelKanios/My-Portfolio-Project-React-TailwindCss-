@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="dark:bg-slate-400 dark:text-white grid grid-cols-1 md:grid-cols-6 xl:grid-cols-6 m-2  bg-stone-100 drop-shadow-xl rounded-lg py-5 font-monts">
+    <div className=" grid grid-cols-1 md:grid-cols-6 xl:grid-cols-6 m-2 glass  drop-shadow-xl rounded-lg py-5 font-monts">
       {/* Social Icons */}
       <div className="col-span-2 flex justify-center items-center">
         <a
@@ -28,7 +28,7 @@ const Footer = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.instagram.com/mkanios77/"
+          href="https://www.instagram.com/chronophos_mk"
         >
           <img
             className="w-10 ml-4 hover:scale-110 duration-200"
