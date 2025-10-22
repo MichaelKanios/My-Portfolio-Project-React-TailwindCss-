@@ -51,7 +51,8 @@ const Hero = () => {
             <button className="px-3 py-3 all_button" href="#">
               DOWNLOAD CV
             </button>
-            <motion.button
+            <a href="#contact">
+   <motion.button
               style={{
                 border,
                 boxShadow,
@@ -67,6 +68,9 @@ const Hero = () => {
             >
               CONTACT ME
             </motion.button>
+
+            </a>
+         
           </div>
         </div>
       </div>
