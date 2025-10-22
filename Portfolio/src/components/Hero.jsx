@@ -48,7 +48,7 @@ const Hero = () => {
             Download my curriculum vitae:
           </h2>
           <div className="flex justify-between ">
-            <button className="px-3 py-3 all_button" href="#">
+            <button className="px-3 py-3 all_button" href="#contact">
               DOWNLOAD CV
             </button>
             <a href="#contact">
@@ -77,7 +77,7 @@ const Hero = () => {
       <div className="w-2/3 xl:w-3/4">
         <img
           className="drop-shadow-2xl rounded-full animate-fadeInSlideRightDown"
-          src="./images/Main.jpg"
+          src="./images/Main2.png"
           alt="Main"
         />
       </div>

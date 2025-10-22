@@ -71,7 +71,7 @@ const Contact = () => {
                     loading="lazy"
                     className="absolute inset-0 h-full w-full rounded-[16px] object-cover contrast-90"
                     alt="Invite background"
-                    src="images/Let_s talk.jpg"
+                    src="./images/Contact.png"
                     style={{
                       boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
                     }}
