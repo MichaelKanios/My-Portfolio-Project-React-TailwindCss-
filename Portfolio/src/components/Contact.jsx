@@ -25,22 +25,29 @@ const Contact = () => {
   });
 
   const [successMessage, setSuccessMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log("Form data:", data);
 
-    // simulate sending form (e.g. API call)
-    setSuccessMessage("Message sent! ✅");
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    // clear form fields
-    reset();
 
-    // remove success message after 3 seconds
-    setTimeout(() => {
-      setSuccessMessage("");
-    }, 3000);
+  const onSubmit = async (data) => {
+    setLoading(true);
+    try {
+      // Στέλνουμε email μέσω EmailJS
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
+      setSuccessMessage("Message sent successfully! ✅");
+      reset();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setSuccessMessage("Something went wrong ❌");
+    } finally {
+      setLoading(false);
+      setTimeout(() => setSuccessMessage(""), 3000);
+    }
   };
-
   return (
     <>
       <h1 id="contact" className="titlesmini">
@@ -180,18 +187,20 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="mt-5 ease-in-out duration-300 bg-red-400 hover:bg-stone-800 text-white rounded-lg text-lg w-full text-center py-4"
+                disabled={loading}
+                className={`mt-5 ease-in-out duration-300 rounded-lg text-lg w-full text-center py-4 text-white ${
+                  loading
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-red-400 hover:bg-stone-800"
+                }`}
               >
                 Send Message
               </button>
-
-              {/* ✅ Success message */}
-              {successMessage && (
+{successMessage && (
                 <p className="text-green-600 font-semibold mt-3 text-center">
                   {successMessage}
                 </p>
               )}
-
               <p className="italic text-sm pt-2">
                 *I will never send you spam emails
               </p>
