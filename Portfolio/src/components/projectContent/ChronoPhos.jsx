@@ -9,13 +9,9 @@ const ChronoPhos = () => {
           >
             <p className="text-neutral-600 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700">
-                Designed and developed ChronoPhos.com entirely from scratch
+               Migrated ChronoPhos.com from a static HTML/Tailwind/JS stack to a modern React + Vite architecture
               </span>{" "}
-              using HTML, Tailwind CSS, and JavaScript. The website showcases my
-              instrumental stoner music project Chrono Phos, blending minimal
-              aesthetics with a dark atmospheric tone that reflects the mood of
-              the album. Focused on smooth navigation, responsive design, and an
-              immersive visual experience for listeners.
+              with React Router v7 for optimized routing. Implemented reusable components, responsive design, and Tailwind styling to maintain the project’s dark atmospheric identity while significantly improving performance and long-term maintainability.
             </p>
             <div className="flex justify-center ">
               <a

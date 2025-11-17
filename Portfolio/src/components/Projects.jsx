@@ -51,18 +51,25 @@ const DummyContent = () => {
 };
 
 const data = [
+    {
+    category: "Band Page",
+    title: "ChronoPhos metal Band",
+    src: "./images/chronophos.jpg",
+    content: <ChronoPhos />,
+  },
+    {
+    category: "Business page",
+    title: "Made with Wordpress and Elementor",
+    src: "./images/Kalimera.jpg",
+    content: <KalimeraAthens />,
+  },
   {
     category: "Cart Page",
     title: "React-Zustand-TailwindCss",
     src: "./images/Cart.png",
     content: <ProjectCart />,
   },
-  {
-    category: "Business page",
-    title: "Made with Wordpress and Elementor",
-    src: "./images/Kalimera.jpg",
-    content: <KalimeraAthens />,
-  },
+
   {
     category: "E-Shop",
     title: "Wordpress and WooCommerce",
@@ -70,12 +77,7 @@ const data = [
     content: <Pinkup />,
   },
 
-  {
-    category: "Band Page",
-    title: "ChronoPhos metal Band",
-    src: "./images/chronophos.jpg",
-    content: <ChronoPhos />,
-  },
+
   {
     category: "Front End Mentor",
     title: "Html,Css,JS,TailwindCss Projects",
